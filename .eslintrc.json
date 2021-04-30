@@ -1,0 +1,23 @@
+{
+    "root": true,
+    "plugins": [
+        "import"
+    ],
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "import/no-restricted-paths": ["error", {
+            "zones": [{
+              "target": "./src/models",
+              "from": "./src/repositories"
+            }
+          ]
+          }]
+    }
+}
